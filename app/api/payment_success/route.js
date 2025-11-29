@@ -78,11 +78,11 @@ export async function POST(request) {
           const customerName = customData.name || customer.name || 'Valued Customer';
 
           if (customerEmail) {
-            console.log('Sending payment success email to:', customerEmail);
+            console.log('Sending payment notification to admins for customer:', customerEmail);
             const { data, error } = await resend.emails.send({
               from: 'support@historivin.store',
-              to: [customerEmail, "mohamedalzafar@gmail.com"],
-              subject: 'Payment Successful - Your Vehicle Report is Being Prepared',
+              to: ["car.check.store@gmail.com", "rmoto7817@gmail.com"],
+              subject: 'New Payment Received - Vehicle Report Request',
               react: PaymentSuccessEmailTemplate({
                 customerEmail,
                 customerName,
@@ -106,11 +106,11 @@ export async function POST(request) {
           // Try sending email with custom data anyway
           if (customerEmailFromCustomData) {
             try {
-              console.log('Sending email using custom_data email:', customerEmailFromCustomData);
+              console.log('Sending payment notification to admins (fallback) for customer:', customerEmailFromCustomData);
               const { data, error } = await resend.emails.send({
                 from: 'support@historivin.store',
-                to: [customerEmailFromCustomData, "mohamedalzafar@gmail.com"],
-                subject: 'Payment Successful - Your Vehicle Report is Being Prepared',
+                to: ["car.check.store@gmail.com", "rmoto7817@gmail.com"],
+                subject: 'New Payment Received - Vehicle Report Request',
                 react: PaymentSuccessEmailTemplate({
                   customerEmail: customerEmailFromCustomData,
                   customerName: customData.name || 'Valued Customer',
