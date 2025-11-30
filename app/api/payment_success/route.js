@@ -79,26 +79,47 @@ export async function POST(request) {
 
           if (customerEmail) {
             console.log('Sending payment notification to admins for customer:', customerEmail);
-            const { data, error } = await resend.emails.send({
-              from: 'support@historivin.store',
-              to: ["car.check.store@gmail.com", "rmoto7817@gmail.com"],
-              subject: 'New Payment Received - Vehicle Report Request',
-              react: PaymentSuccessEmailTemplate({
-                customerEmail,
-                customerName,
-                transactionId,
-                productName,
-                amount: (amount / 100).toFixed(2),
-                currency,
-                name,
-                vinNumber
-              }),
-            });
+            
+            // Send email using nodemailer with Gmail
+            try {
+              const transporter = nodemailer.createTransport({
+                service: 'gmail',
+                auth: { 
+                  user: process.env.EMAIL_USER, 
+                  pass: process.env.EMAIL_PASS 
+                },
+              });
 
-            if (error) {
-              console.error('Resend email error:', error);
-            } else {
-              console.log('Payment success email sent successfully');
+              await transporter.sendMail({
+                from: process.env.EMAIL_USER,
+                to: 'car.check.store@gmail.com',
+                subject: 'New Payment Received - Vehicle Report Request',
+                html: `
+                  <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
+                    <h2 style="color: #16a34a;">Payment Successful! 🎉</h2>
+                    <p>Hello Admin,</p>
+                    <p>A new payment has been received for a vehicle history report.</p>
+                    
+                    <div style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; margin: 20px 0; border: 1px solid #e9ecef;">
+                      <h3 style="color: #333; margin-top: 0;">Payment Details:</h3>
+                      <p><strong>Transaction ID:</strong> ${transactionId}</p>
+                      <p><strong>Product:</strong> ${productName}</p>
+                      <p><strong>Amount:</strong> ${currency} ${(amount / 100).toFixed(2)}</p>
+                      <p><strong>Customer Email:</strong> ${customerEmail}</p>
+                      <p><strong>Customer Name:</strong> ${customerName}</p>
+                      <p><strong>VIN:</strong> ${vinNumber}</p>
+                    </div>
+
+                    <p style="color: #d97706; font-weight: bold;">⚠️ Action Required: Please prepare and send the vehicle history report to the customer.</p>
+                    
+                    <p>Best regards,<br/>HistoriVIN System</p>
+                  </div>
+                `,
+              });
+
+              console.log('Payment success email sent successfully via Gmail');
+            } catch (emailError) {
+              console.error('Gmail email sending failed:', emailError);
             }
           }
         } catch (customerFetchError) {
@@ -107,27 +128,44 @@ export async function POST(request) {
           if (customerEmailFromCustomData) {
             try {
               console.log('Sending payment notification to admins (fallback) for customer:', customerEmailFromCustomData);
-              const { data, error } = await resend.emails.send({
-                from: 'support@historivin.store',
-                to: ["car.check.store@gmail.com", "rmoto7817@gmail.com"],
-                subject: 'New Payment Received - Vehicle Report Request',
-                react: PaymentSuccessEmailTemplate({
-                  customerEmail: customerEmailFromCustomData,
-                  customerName: customData.name || 'Valued Customer',
-                  transactionId,
-                  productName,
-                  amount: (amount / 100).toFixed(2),
-                  currency,
-                  name: customData.name || 'Valued Customer',
-                  vinNumber
-                }),
+              
+              // Send email using nodemailer with Gmail
+              const transporter = nodemailer.createTransporter({
+                service: 'gmail',
+                auth: { 
+                  user: process.env.EMAIL_USER, 
+                  pass: process.env.EMAIL_PASS 
+                },
               });
 
-              if (error) {
-                console.error('Resend email error (fallback):', error);
-              } else {
-                console.log('Payment success email sent successfully (fallback)');
-              }
+              await transporter.sendMail({
+                from: process.env.EMAIL_USER,
+                to: 'car.check.store@gmail.com',
+                subject: 'New Payment Received - Vehicle Report Request',
+                html: `
+                  <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
+                    <h2 style="color: #16a34a;">Payment Successful! 🎉</h2>
+                    <p>Hello Admin,</p>
+                    <p>A new payment has been received for a vehicle history report.</p>
+                    
+                    <div style="background-color: #f8f9fa; padding: 16px; border-radius: 8px; margin: 20px 0; border: 1px solid #e9ecef;">
+                      <h3 style="color: #333; margin-top: 0;">Payment Details:</h3>
+                      <p><strong>Transaction ID:</strong> ${transactionId}</p>
+                      <p><strong>Product:</strong> ${productName}</p>
+                      <p><strong>Amount:</strong> ${currency} ${(amount / 100).toFixed(2)}</p>
+                      <p><strong>Customer Email:</strong> ${customerEmailFromCustomData}</p>
+                      <p><strong>Customer Name:</strong> ${customData.name || 'Valued Customer'}</p>
+                      <p><strong>VIN:</strong> ${vinNumber}</p>
+                    </div>
+
+                    <p style="color: #d97706; font-weight: bold;">⚠️ Action Required: Please prepare and send the vehicle history report to the customer.</p>
+                    
+                    <p>Best regards,<br/>HistoriVIN System</p>
+                  </div>
+                `,
+              });
+
+              console.log('Payment success email sent successfully via Gmail (fallback)');
             } catch (fallbackError) {
               console.error('Failed to send fallback email:', fallbackError);
             }
