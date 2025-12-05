@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
-  title: "Refund Policy - HistoriVIN | Vehicle History Reports",
-  description: "Refund Policy for HistoriVIN vehicle history reports. Learn about our no-refund policy for digital vehicle history services.",
+  title: "Refund Policy - VinXtract | Vehicle History Reports",
+  description: "Refund Policy for VinXtract vehicle history reports. Learn about our no-refund policy for digital vehicle history services.",
   robots: {
     index: true,
     follow: true,
@@ -21,12 +21,12 @@ export default function RefundPolicy() {
               <Link href="/" className="flex items-center">
                 <Image
                   src="/car-logo.webp"
-                  alt="HistoriVIN"
+                  alt="VinXtract"
                   width={40}
                   height={40}
                   className="mr-3"
                 />
-                <div className="text-2xl font-bold text-blue-600">HistoriVIN</div>
+                <div className="text-2xl font-bold text-blue-600">VinXtract</div>
               </Link>
             </div>
             <nav className="flex items-center space-x-6">
@@ -81,7 +81,7 @@ export default function RefundPolicy() {
               </p>
               <ul className="list-disc pl-6 text-gray-700 space-y-2">
                 <li><strong>Refund Period:</strong> 14 calendar days from purchase date</li>
-                <li><strong>Request Method:</strong> Email support@historivin.store with your request</li>
+                <li><strong>Request Method:</strong> Email support@vinxtract.store with your request</li>
                 <li><strong>Processing Time:</strong> Approved refunds processed within 5-7 business days</li>
                 <li><strong>Refund Method:</strong> Original payment method used for purchase</li>
               </ul>
@@ -173,7 +173,7 @@ export default function RefundPolicy() {
                 If you believe your situation qualifies for a refund under our policy:
               </p>
               <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li><strong>Contact us within 14 days:</strong> Email support@historivin.store</li>
+                <li><strong>Contact us within 14 days:</strong> Email support@vinxtract.store</li>
                 <li><strong>Include your order details:</strong> Purchase date, VIN number, and payment information</li>
                 <li><strong>Explain the qualifying reason:</strong> Clearly describe why you believe a refund is warranted</li>
                 <li><strong>Provide evidence if applicable:</strong> Screenshots of errors or technical issues</li>
@@ -254,8 +254,8 @@ export default function RefundPolicy() {
               </p>
               <div className="bg-gray-50 p-6 rounded-lg mt-4">
                 <p className="text-gray-700">
-                  <strong>Email:</strong> support@historivin.store<br/>
-                  <strong>Website:</strong> <Link href="https://historivin.store" className="text-blue-600 hover:text-blue-700">https://historivin.store</Link><br/>
+                  <strong>Email:</strong> support@vinxtract.store<br/>
+                  <strong>Website:</strong> <Link href="https://VinXtract.store" className="text-blue-600 hover:text-blue-700">https://VinXtract.store</Link><br/>
                   <strong>Response Time:</strong> 24-48 hours
                 </p>
               </div>
@@ -280,12 +280,12 @@ export default function RefundPolicy() {
             <div className="mb-4 md:mb-0 flex items-center">
               <Image
                 src="/car-logo.webp"
-                alt="HistoriVIN"
+                alt="VinXtract"
                 width={32}
                 height={32}
                 className="mr-3"
               />
-              <div className="text-xl font-bold text-blue-400">HistoriVIN</div>
+              <div className="text-xl font-bold text-blue-400">VinXtract</div>
             </div>
 
             <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">

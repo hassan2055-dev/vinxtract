@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
-  title: "Privacy Policy - HistoriVIN | Vehicle History Reports",
-  description: "Privacy Policy for HistoriVIN vehicle history reports service. Learn how we collect, use, and protect your personal information.",
+  title: "Privacy Policy - VinXtract | Vehicle History Reports",
+  description: "Privacy Policy for VinXtract vehicle history reports service. Learn how we collect, use, and protect your personal information.",
   robots: {
     index: true,
     follow: true,
@@ -21,12 +21,12 @@ export default function PrivacyPolicy() {
               <Link href="/" className="flex items-center">
                 <Image
                   src="/car-logo.webp"
-                  alt="HistoriVIN"
+                  alt="VinXtract"
                   width={40}
                   height={40}
                   className="mr-3"
                 />
-                <div className="text-2xl font-bold text-blue-600">HistoriVIN</div>
+                <div className="text-2xl font-bold text-blue-600">VinXtract</div>
               </Link>
             </div>
             <nav className="flex items-center space-x-6">
@@ -187,8 +187,8 @@ export default function PrivacyPolicy() {
               </p>
               <div className="bg-gray-50 p-6 rounded-lg mt-4">
                 <p className="text-gray-700">
-                  <strong>Email:</strong> support@historivin.store<br/>
-                  <strong>Website:</strong> <Link href="https://historivin.store" className="text-blue-600 hover:text-blue-700">https://historivin.store</Link>
+                  <strong>Email:</strong> support@vinxtract.store<br/>
+                  <strong>Website:</strong> <Link href="https://VinXtract.store" className="text-blue-600 hover:text-blue-700">https://VinXtract.store</Link>
                 </p>
               </div>
             </section>
@@ -203,12 +203,12 @@ export default function PrivacyPolicy() {
             <div className="mb-4 md:mb-0 flex items-center">
               <Image
                 src="/car-logo.webp"
-                alt="HistoriVIN"
+                alt="VinXtract"
                 width={32}
                 height={32}
                 className="mr-3"
               />
-              <div className="text-xl font-bold text-blue-400">HistoriVIN</div>
+              <div className="text-xl font-bold text-blue-400">VinXtract</div>
             </div>
 
             <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">

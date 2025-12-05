@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata = {
-  title: "About HistoriVIN - Professional Vehicle History Reports | Company Information",
+  title: "About VinXtract - Professional Vehicle History Reports | Company Information",
   description: "Learn about CarCheck, the leading provider of comprehensive vehicle history reports. Trusted since 2015 with comprehensive data coverage worldwide.",
   robots: {
     index: true,
@@ -21,12 +21,12 @@ export default function About() {
               <Link href="/" className="flex items-center">
                 <Image
                   src="/car-logo.webp"
-                  alt="HistoriVIN"
+                  alt="VinXtract"
                   width={40}
                   height={40}
                   className="mr-3"
                 />
-                <div className="text-2xl font-bold text-blue-600">HistoriVIN</div>
+                <div className="text-2xl font-bold text-blue-600">VinXtract</div>
               </Link>
             </div>
             <nav className="flex items-center space-x-6">
@@ -42,7 +42,7 @@ export default function About() {
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            About HistoriVIN
+            About VinXtract
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Leading provider of comprehensive vehicle history reports since 2015. Trusted by car buyers, sellers, and dealers worldwide.
@@ -94,7 +94,7 @@ export default function About() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Website:</span>
-                  <span className="font-semibold text-blue-600">historivin.store</span>
+                  <span className="font-semibold text-blue-600">vinxtract.store</span>
                 </div>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function About() {
               What We Do
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              HistoriVIN provides professional vehicle history report services to help customers make informed car buying decisions.
+              VinXtract provides professional vehicle history report services to help customers make informed car buying decisions.
             </p>
           </div>
 
@@ -147,7 +147,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose HistoriVIN
+              Why Choose VinXtract
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We are committed to providing the most comprehensive and accurate vehicle history information available.
@@ -233,7 +233,7 @@ export default function About() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Contact HistoriVIN</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Contact VinXtract</h2>
             <p className="text-xl text-gray-600">Get in touch with our customer support team</p>
           </div>
 
@@ -243,7 +243,7 @@ export default function About() {
               <div className="space-y-4">
                 <div>
                   <div className="font-medium text-gray-900">Email Support</div>
-                  <div className="text-gray-600">support@historivin.store</div>
+                  <div className="text-gray-600">support@vinxtract.store</div>
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">Response Time</div>
@@ -265,7 +265,7 @@ export default function About() {
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">Website</div>
-                  <div className="text-gray-600">historivin.store</div>
+                  <div className="text-gray-600">vinxtract.store</div>
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">Service</div>
@@ -284,12 +284,12 @@ export default function About() {
             <div className="mb-4 md:mb-0 flex items-center">
               <Image
                 src="/car-logo.webp"
-                alt="HistoriVIN"
+                alt="VinXtract"
                 width={32}
                 height={32}
                 className="mr-3"
               />
-              <div className="text-xl font-bold text-blue-400">HistoriVIN</div>
+              <div className="text-xl font-bold text-blue-400">VinXtract</div>
             </div>
 
             <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">

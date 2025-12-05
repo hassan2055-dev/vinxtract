@@ -109,7 +109,7 @@ Please process this request and send the vehicle history report to the customer.
           
           <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center;">
             <p style="color: #6b7280; font-size: 14px; margin: 0;">
-              This is an automated notification from HistoriVIN
+              This is an automated notification from VinXtract
             </p>
           </div>
         </div>

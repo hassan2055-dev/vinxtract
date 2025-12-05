@@ -214,12 +214,12 @@ export default function Pricing() {
               <Link href="/" className="flex items-center">
                 <Image
                   src="/car-logo.webp"
-                  alt="HistoriVIN"
+                  alt="VinXtract"
                   width={40}
                   height={40}
                   className="mr-3"
                 />
-                <div className="text-2xl font-bold text-blue-600">HistoriVIN</div>
+                <div className="text-2xl font-bold text-blue-600">VinXtract</div>
               </Link>
             </div>
             <nav className="flex items-center space-x-6">
@@ -235,7 +235,7 @@ export default function Pricing() {
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            HistoriVIN Pricing
+            VinXtract Pricing
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Transparent, affordable pricing for comprehensive vehicle history reports. No hidden fees, no subscriptions - just one fair price per report.
@@ -449,7 +449,7 @@ export default function Pricing() {
           <div className="space-y-6">
             {[
               {
-                question: "Why does HistoriVIN cost $40?",
+                question: "Why does VinXtract cost $40?",
                 answer: "Our pricing reflects the comprehensive nature of our reports and the costs associated with accessing premium automotive databases. We provide detailed analysis and professional report formatting - all for less than the cost of a tank of gas."
               },
               {
@@ -458,7 +458,7 @@ export default function Pricing() {
               },
               {
                 question: "Can I get a refund if I'm not satisfied?",
-                answer: "No. HistoriVIN is a digital service with instant delivery. All sales are final and non-refundable. Please ensure you enter the correct VIN before purchasing."
+                answer: "No. VinXtract is a digital service with instant delivery. All sales are final and non-refundable. Please ensure you enter the correct VIN before purchasing."
               },
               {
                 question: "How does your pricing compare to competitors?",
@@ -489,7 +489,7 @@ export default function Pricing() {
             Ready to Get Your Vehicle History Report?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join thousands of satisfied customers who trust HistoriVIN for their vehicle history needs.
+            Join thousands of satisfied customers who trust VinXtract for their vehicle history needs.
           </p>
           
           <div className="mb-8">
@@ -525,12 +525,12 @@ export default function Pricing() {
             <div className="mb-4 md:mb-0 flex items-center">
               <Image
                 src="/car-logo.webp"
-                alt="HistoriVIN"
+                alt="VinXtract"
                 width={32}
                 height={32}
                 className="mr-3"
               />
-              <div className="text-xl font-bold text-blue-400">HistoriVIN</div>
+              <div className="text-xl font-bold text-blue-400">VinXtract</div>
             </div>
 
             <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">

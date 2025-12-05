@@ -1,4 +1,4 @@
-# HistoriVIN - Paddle Domain Approval Compliance Summary
+# VinXtract - Paddle Domain Approval Compliance Summary
 
 ## ✅ Completed Improvements for Paddle Compliance
 
@@ -24,7 +24,7 @@
 ### 4. Clear Product/Service Description ✅
 - Enhanced hero section with detailed service description
 - Added comprehensive "What You Get" section
-- Clear explanation of HistoriVIN service deliverables
+- Clear explanation of VinXtract service deliverables
 - Professional service description with key features
 
 ### 5. Key Features and Deliverables Section ✅
@@ -58,13 +58,13 @@ Your Next.js application is configured for HTTPS deployment. When you deploy to 
 Before submitting to Paddle, verify:
 
 ### ✅ Required Information Present:
-1. **Clear product description** - HistoriVIN vehicle history reports
+1. **Clear product description** - VinXtract vehicle history reports
 2. **Pricing details** - $39.99 per report, clearly displayed
 3. **Key features** - Comprehensive list of what's included
-4. **Terms & Conditions** - Complete with company name (HistoriVIN LLC)
+4. **Terms & Conditions** - Complete with company name (VinXtract LLC)
 5. **Privacy Policy** - GDPR compliant privacy information
 6. **Refund Policy** - Clear no-refund policy for digital service
-7. **Company information** - HistoriVIN LLC clearly identified
+7. **Company information** - VinXtract LLC clearly identified
 8. **SSL Certificate** - Must be active on production domain
 
 ### 🌐 Domain Deployment Requirements:
@@ -77,7 +77,7 @@ Before submitting to Paddle, verify:
 ## 💡 Additional Recommendations
 
 ### For Better Paddle Approval:
-1. **Company Legitimacy**: The site now clearly shows HistoriVIN LLC as a legitimate business
+1. **Company Legitimacy**: The site now clearly shows VinXtract LLC as a legitimate business
 2. **Service Clarity**: Clear description of digital vehicle history reports
 3. **Pricing Transparency**: No hidden fees, clear one-time pricing
 4. **Professional Appearance**: Enhanced design and professional presentation
@@ -92,8 +92,8 @@ Before submitting to Paddle, verify:
 ## 📞 Support Information
 
 Your site now includes comprehensive contact information:
-- **Email**: support@historivin.store
-- **Company**: HistoriVIN LLC
+- **Email**: support@vinxtract.store
+- **Company**: VinXtract LLC
 - **Service**: Professional Vehicle History Reports
 - **Response Time**: 24-48 hours
 

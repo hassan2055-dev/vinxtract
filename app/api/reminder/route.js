@@ -9,7 +9,7 @@ export async function POST(request) {
   try {
     const oneMinuteFromNow = new Date(Date.now() + 1000 * 60).toISOString();
     const { data, error } = await resend.emails.send({
-      from: 'support@historivin.store',
+      from: 'support@vinxtract.store',
       to: [email],
       subject: 'Payment Completion mail - IGNORE THIS IF YOU HAVE ALREADY PAID FOR THE REPORT',
       react: EmailTemplate({vin, email, carModel}),

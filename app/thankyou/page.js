@@ -14,12 +14,12 @@ export default function ThankYou() {
             <Link href="/" className="flex items-center">
               <Image 
                 src="/car-logo.webp" 
-                alt="HistorivinStore" 
+                alt="VinXtractStore" 
                 width={40}
                 height={40}
                 className="mr-3"
               />
-              <div className="text-2xl font-bold text-blue-600">HistorivinStore</div>
+              <div className="text-2xl font-bold text-blue-600">VinXtractStore</div>
             </Link>
             
             {/* Navigation */}
@@ -48,7 +48,7 @@ export default function ThankYou() {
           </h1>
           
           <p className="text-xl text-gray-600 mb-8">
-            Your HistorivinStore VIN report request has been successfully submitted and payment has been processed. Your comprehensive vehicle history report will be delivered soon. For any query feel free to message us on support@historivin.store
+            Your VinXtractStore VIN report request has been successfully submitted and payment has been processed. Your comprehensive vehicle history report will be delivered soon. For any query feel free to message us on support@vinxtract.store
           </p>
 
           {/* Order Details */}
@@ -62,7 +62,7 @@ export default function ThankYou() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Processing Your Request</h3>
-                  <p className="text-gray-600">Our HistorivinStore system is now processing your VIN and gathering data from comprehensive databases worldwide.</p>
+                  <p className="text-gray-600">Our VinXtractStore system is now processing your VIN and gathering data from comprehensive databases worldwide.</p>
                 </div>
               </div>
 
@@ -115,7 +115,7 @@ export default function ThankYou() {
               Back to Home
             </Link>
             <button 
-              onClick={() => window.location.href = 'mailto:support@historivin.com'}
+              onClick={() => window.location.href = 'mailto:support@vinxtract.com'}
               className="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors font-semibold"
             >
               Contact Support
@@ -137,7 +137,7 @@ export default function ThankYou() {
                 </svg>
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">Email Support</h3>
-              <p className="text-gray-600 text-sm">support@historivin.com</p>
+              <p className="text-gray-600 text-sm">support@vinxtract.com</p>
             </div>
 
             <div className="text-center">
@@ -170,12 +170,12 @@ export default function ThankYou() {
             <div className="mb-4 md:mb-0 flex items-center">
               <Image 
                 src="/car-logo.webp" 
-                alt="HistorivinStore" 
+                alt="VinXtractStore" 
                 width={32}
                 height={32}
                 className="mr-3"
               />
-              <div className="text-2xl font-bold text-blue-400">HistorivinStore</div>
+              <div className="text-2xl font-bold text-blue-400">VinXtractStore</div>
             </div>
             
             <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">
@@ -186,7 +186,7 @@ export default function ThankYou() {
           </div>
           
           <div className="mt-6 pt-6 border-t border-gray-800 text-center text-gray-400">
-            © 2015 HistorivinStore. All rights reserved. | Vehicle History Reports & VIN Checks
+            © 2015 VinXtractStore. All rights reserved. | Vehicle History Reports & VIN Checks
           </div>
         </div>
       </footer>

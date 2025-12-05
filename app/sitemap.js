@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://historivin.store'
+  const baseUrl = 'https://vinxtract.store'
   
   return [
     {

@@ -112,7 +112,7 @@ export async function POST(request) {
 
                     <p style="color: #d97706; font-weight: bold;">⚠️ Action Required: Please prepare and send the vehicle history report to the customer.</p>
                     
-                    <p>Best regards,<br/>HistoriVIN System</p>
+                    <p>Best regards,<br/>VinXtract System</p>
                   </div>
                 `,
               });
@@ -160,7 +160,7 @@ export async function POST(request) {
 
                     <p style="color: #d97706; font-weight: bold;">⚠️ Action Required: Please prepare and send the vehicle history report to the customer.</p>
                     
-                    <p>Best regards,<br/>HistoriVIN System</p>
+                    <p>Best regards,<br/>VinXtract System</p>
                   </div>
                 `,
               });
@@ -188,7 +188,7 @@ export async function POST(request) {
       <p><b>Customer ID:</b> ${eventData.data.customer_id || 'N/A'}</p>
       <p><b>Transaction ID:</b> ${eventData.data.id || 'N/A'}</p>
       <p><b>Status:</b> ${eventData.data.status || 'N/A'}</p>
-      <p><b>Status:</b> historivin Testing purposes </p>
+      <p><b>Status:</b> vinxtract Testing purposes </p>
       <p><b>Name:</b> ${eventData.data.payments?.[0]?.method_details?.card?.cardholder_name || 'N/A'}</p>
       ` : '<p><b>No items found in transaction</b></p>'}
       

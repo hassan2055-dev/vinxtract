@@ -1,7 +1,7 @@
 {
-  "name": "HistorivinStore - Vehicle History Reports",
-  "short_name": "HistorivinStore",
-  "description": "Get comprehensive vehicle history reports and VIN checks from HistorivinStore. Trusted by car buyers worldwide.",
+  "name": "VinXtractStore - Vehicle History Reports",
+  "short_name": "VinXtractStore",
+  "description": "Get comprehensive vehicle history reports and VIN checks from VinXtractStore. Trusted by car buyers worldwide.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

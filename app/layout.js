@@ -12,19 +12,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "HistorivinStore - #1 Vehicle History Reports | HistoriVIN Car Reports",
-  description: "HistorivinStore offers the most comprehensive vehicle history reports. Get instant VIN checks, accident history, mileage verification, title records, and market value analysis. Trusted by thousands of car buyers worldwide. Avoid costly mistakes with our detailed car history reports.",
-  keywords: "historivinstore, historvin store ,histori vin store, vehicle history report, VIN check, car history, auto history report, used car report, vehicle records, accident history, mileage verification, title check, car buying, automotive history, vehicle inspection",
-  authors: [{ name: "HistoriVIN Team" }],
-  creator: "HistoriVIN",
-  publisher: "HistoriVIN",
+  title: "VinXtractStore - #1 Vehicle History Reports | VinXtract Car Reports",
+  description: "VinXtractStore offers the most comprehensive vehicle history reports. Get instant VIN checks, accident history, mileage verification, title records, and market value analysis. Trusted by thousands of car buyers worldwide. Avoid costly mistakes with our detailed car history reports.",
+  keywords: "vinxtractstore, vinxtract store, vehicle history report, VIN check, car history, auto history report, used car report, vehicle records, accident history, mileage verification, title check, car buying, automotive history, vehicle inspection",
+  authors: [{ name: "VinXtract Team" }],
+  creator: "VinXtract",
+  publisher: "VinXtract",
   // Enhanced meta tags for better SERP control
-  metadataBase: new URL("https://historivin.store"),
+  metadataBase: new URL("https://vinxtract.store"),
   alternates: {
-    canonical: "https://historivin.store",
+    canonical: "https://vinxtract.store",
     languages: {
-      "en-US": "https://historivin.store",
-      "x-default": "https://historivin.store"
+      "en-US": "https://vinxtract.store",
+      "x-default": "https://vinxtract.store"
     }
   },
   robots: {
@@ -42,18 +42,18 @@ export const metadata = {
   },
   // Enhanced Open Graph for social media SERP
   openGraph: {
-    title: "HistorivinStore - #1 Vehicle History Reports | Complete Car History Check",
-    description: "Get comprehensive vehicle history reports from HistorivinStore. Check accident history, verify mileage, review title records, and get market value analysis. Trusted by car buyers worldwide.",
-    url: "https://historivin.store",
-    siteName: "HistorivinStore",
+    title: "VinXtractStore - #1 Vehicle History Reports | Complete Car History Check",
+    description: "Get comprehensive vehicle history reports from VinXtractStore. Check accident history, verify mileage, review title records, and get market value analysis. Trusted by car buyers worldwide.",
+    url: "https://vinxtract.store",
+    siteName: "VinXtractStore",
     type: "website",
     locale: "en_US",
     images: [
       {
-        url: "/HistoriVIN.png",
+        url: "/VinXtract.png",
         width: 1200,
         height: 630,
-        alt: "HistorivinStore - Vehicle History Reports",
+        alt: "VinXtractStore - Vehicle History Reports",
         type: "image/png"
       },
     ],
@@ -61,11 +61,11 @@ export const metadata = {
   // Enhanced Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "HistorivinStore - #1 Vehicle History Reports",
+    title: "VinXtractStore - #1 Vehicle History Reports",
     description: "Get comprehensive vehicle history reports. Check accident history, verify mileage, and get market value analysis. Trusted by car buyers worldwide.",
-    images: ["/HistoriVIN.png"],
-    creator: "@historivin",
-    site: "@historivin",
+    images: ["/VinXtract.png"],
+    creator: "@vinxtract",
+    site: "@vinxtract",
   },
   // Search Engine Verification
   verification: {
@@ -100,8 +100,8 @@ export const metadata = {
   },
   // App-specific meta
   other: {
-    "apple-mobile-web-app-title": "HistorivinStore",
-    "application-name": "HistorivinStore",
+    "apple-mobile-web-app-title": "VinXtractStore",
+    "application-name": "VinXtractStore",
     "msapplication-TileColor": "#2563eb",
     "msapplication-TileImage": "/car-logo.webp",
     "theme-color": "#2563eb",
@@ -143,15 +143,15 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "HistorivinStore",
-              "alternateName": "HistoriVIN",
-              "url": "https://historivin.store",
-              "logo": "https://historivin.store/car-logo.webp",
+              "name": "VinXtractStore",
+              "alternateName": "VinXtract",
+              "url": "https://vinxtract.store",
+              "logo": "https://vinxtract.store/car-logo.webp",
               "description": "Leading provider of comprehensive vehicle history reports and VIN checks for car buyers worldwide.",
               "sameAs": [
-                "https://twitter.com/historivin",
-                "https://facebook.com/historivin",
-                "https://linkedin.com/company/historivin"
+                "https://twitter.com/vinxtract",
+                "https://facebook.com/vinxtract",
+                "https://linkedin.com/company/vinxtract"
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
@@ -171,7 +171,7 @@ export default function RootLayout({ children }) {
                 "description": "Professional vehicle history checking service",
                 "provider": {
                   "@type": "Organization",
-                  "name": "HistorivinStore"
+                  "name": "VinXtractStore"
                 },
                 "areaServed": "Worldwide",
                 "hasOfferCatalog": {
@@ -200,12 +200,12 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "HistorivinStore",
-              "url": "https://historivin.store",
+              "name": "VinXtractStore",
+              "url": "https://vinxtract.store",
               "description": "Get comprehensive vehicle history reports and VIN checks. Uncover accident history, verify mileage, check title records, and get market value analysis.",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://historivin.store/?vin={search_term_string}",
+                "target": "https://vinxtract.store/?vin={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })
@@ -222,7 +222,7 @@ export default function RootLayout({ children }) {
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "How accurate are HistoriVIN reports?",
+                  "name": "How accurate are VinXtract reports?",
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Our reports are highly accurate as we source data from over 900 trusted databases including DMV records, insurance companies, auction houses, and government agencies. However, we recommend using our reports as one factor in your decision-making process."
@@ -230,7 +230,7 @@ export default function RootLayout({ children }) {
                 },
                 {
                   "@type": "Question",
-                  "name": "How long does it take to receive my HistoriVIN report?",
+                  "name": "How long does it take to receive my VinXtract report?",
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Most reports are delivered within 1-2 hours via email. However, we allow up to 6-12 hours for delivery to account for any technical delays or complex data compilation requirements."
@@ -238,15 +238,15 @@ export default function RootLayout({ children }) {
                 },
                 {
                   "@type": "Question",
-                  "name": "What makes HistoriVIN different from competitors?",
+                  "name": "What makes VinXtract different from competitors?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "HistoriVIN offers the most comprehensive database with over 1 billion data points, faster delivery times, 24/7 customer support, and competitive pricing. We also provide market value analysis and detailed damage assessments."
+                    "text": "VinXtract offers the most comprehensive database with over 1 billion data points, faster delivery times, 24/7 customer support, and competitive pricing. We also provide market value analysis and detailed damage assessments."
                   }
                 },
                 {
                   "@type": "Question", 
-                  "name": "Do HistoriVIN reports cover vehicles from all countries?",
+                  "name": "Do VinXtract reports cover vehicles from all countries?",
                   "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "We currently cover vehicles from over 35 countries across North America, Europe, Oceania, Africa, and the Middle East. Our coverage is continuously expanding to include more international markets."
@@ -268,7 +268,7 @@ export default function RootLayout({ children }) {
               "description": "Comprehensive vehicle history report including accident history, mileage verification, title records, and market value analysis",
               "brand": {
                 "@type": "Brand",
-                "name": "HistoriVIN"
+                "name": "VinXtract"
               },
               "offers": {
                 "@type": "Offer",
@@ -277,7 +277,7 @@ export default function RootLayout({ children }) {
                 "availability": "https://schema.org/InStock",
                 "seller": {
                   "@type": "Organization",
-                  "name": "HistoriVIN"
+                  "name": "VinXtract"
                 }
               },
               "aggregateRating": {
@@ -299,7 +299,7 @@ export default function RootLayout({ children }) {
                     "@type": "Person",
                     "name": "JC"
                   },
-                  "reviewBody": "Very reassuring before buying a used vehicle. HistoriVIN provided a detailed and accurate report."
+                  "reviewBody": "Very reassuring before buying a used vehicle. VinXtract provided a detailed and accurate report."
                 },
                 {
                   "@type": "Review",
@@ -312,7 +312,7 @@ export default function RootLayout({ children }) {
                     "@type": "Person",
                     "name": "Sasha"
                   },
-                  "reviewBody": "Slightly pricey, but saved me from a huge mistake. The mileage was tampered, and HistoriVIN caught it."
+                  "reviewBody": "Slightly pricey, but saved me from a huge mistake. The mileage was tampered, and VinXtract caught it."
                 }
               ]
             })

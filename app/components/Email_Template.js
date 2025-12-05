@@ -7,7 +7,7 @@ export default function Email_Template({vin , email, carModel}) {
     <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', color: '#333' }}>
       <h2 style={{ color: '#111' }}>Payment Pending</h2>
       <p>
-        We have received your order for the <strong>HistoriVin Report</strong>, but we have not yet received your payment.
+        We have received your order for the <strong>VinXtract Report</strong>, but we have not yet received your payment.
         Kindly complete the payment so that we can process and send your report without any delay.
       </p>
       <p>You can complete your payment using the link below:</p>
@@ -40,7 +40,7 @@ export default function Email_Template({vin , email, carModel}) {
         If you face any issues while making the payment, please let us know, and we will be happy to assist you.
       </p>
       <p>Thank you for your prompt attention.</p>
-      <p>Best regards,<br/>HistoriVin Team</p>
+      <p>Best regards,<br/>VinXtract Team</p>
     </div>
   );
 }

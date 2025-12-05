@@ -5,7 +5,7 @@ const nextConfig = {
   
   // Enable image optimization
   images: {
-    domains: ['historivinstore.com'],
+    domains: ['vinxtractstore.com'],
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
   },

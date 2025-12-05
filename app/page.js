@@ -280,12 +280,12 @@ if(formattedDate == "15/11/2025"){
             <div className="flex items-center">
               <Image
                 src="/car-logo.webp"
-                alt="HistoriVIN - Vehicle History Reports"
+                alt="VinXtract - Vehicle History Reports"
                 width={40}
                 height={40}
                 className="mr-3"
               />
-              <div className="text-2xl font-bold text-blue-600">HistoriVIN</div>
+              <div className="text-2xl font-bold text-blue-600">VinXtract</div>
             </div>
 
             {/* Desktop Navigation */}
@@ -361,11 +361,11 @@ if(formattedDate == "15/11/2025"){
             {/* Left side - Content */}
             <div className="text-center lg:text-left">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                HistoriVIN: Comprehensive Vehicle History Reports<br />
+                VinXtract: Comprehensive Vehicle History Reports<br />
                 <span className="text-blue-600">Uncover the complete story of any vehicle</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl">
-                <strong>HistoriVIN is a professional vehicle history report service</strong> that provides comprehensive VIN checks and detailed automotive analysis. Our service delivers complete vehicle histories including accident records, title information, mileage verification, safety recalls, market value analysis, and ownership history. Trusted by car buyers, sellers, and dealers worldwide for making informed vehicle purchasing decisions.
+                <strong>VinXtract is a professional vehicle history report service</strong> that provides comprehensive VIN checks and detailed automotive analysis. Our service delivers complete vehicle histories including accident records, title information, mileage verification, safety recalls, market value analysis, and ownership history. Trusted by car buyers, sellers, and dealers worldwide for making informed vehicle purchasing decisions.
               </p>
 
               {/* Key Service Highlights */}
@@ -554,7 +554,7 @@ if(formattedDate == "15/11/2025"){
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What You Get with Every HistoriVIN Report
+              What You Get with Every VinXtract Report
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our $40 vehicle history report includes comprehensive analysis and detailed documentation delivered as a professional PDF report to your email.
@@ -649,7 +649,7 @@ if(formattedDate == "15/11/2025"){
 
           {/* Service Guarantee */}
           <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">HistoriVIN Service Guarantee</h3>
+            <h3 className="text-2xl font-bold mb-4">VinXtract Service Guarantee</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
                 <div className="text-3xl mb-2">⚡</div>
@@ -676,10 +676,10 @@ if(formattedDate == "15/11/2025"){
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What HistoriVIN checks when preparing your vehicle history report
+              What VinXtract checks when preparing your vehicle history report
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              HistoriVIN reports are powered by a global automotive data network, covering over 1 billion data points across thousands of vehicles. Our comprehensive VIN check service ensures you get accurate, reliable information.
+              VinXtract reports are powered by a global automotive data network, covering over 1 billion data points across thousands of vehicles. Our comprehensive VIN check service ensures you get accurate, reliable information.
             </p>
           </div>
 
@@ -731,10 +731,10 @@ if(formattedDate == "15/11/2025"){
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Choose wisely with HistoriVIN
+              Choose wisely with VinXtract
             </h2>
             <p className="text-xl text-gray-600">
-              Make a confident car buying decision with the help of a comprehensive HistoriVIN vehicle history report.
+              Make a confident car buying decision with the help of a comprehensive VinXtract vehicle history report.
             </p>
           </div>
 
@@ -773,27 +773,27 @@ if(formattedDate == "15/11/2025"){
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Hear from people who trust HistoriVIN
+              Hear from people who trust VinXtract
             </h2>
             <p className="text-xl text-gray-600">
-              See how real customers are making better car decisions with HistoriVIN vehicle history reports:
+              See how real customers are making better car decisions with VinXtract vehicle history reports:
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                quote: "Very reassuring before buying a used vehicle. HistoriVIN provided a detailed and accurate report.",
+                quote: "Very reassuring before buying a used vehicle. VinXtract provided a detailed and accurate report.",
                 author: "JC",
                 verified: true
               },
               {
-                quote: "Slightly pricey, but saved me from a huge mistake. The mileage was tampered, and HistoriVIN caught it.",
+                quote: "Slightly pricey, but saved me from a huge mistake. The mileage was tampered, and VinXtract caught it.",
                 author: "Sasha",
                 verified: true
               },
               {
-                quote: "Everything matched perfectly. HistoriVIN helped me catch an odometer fraud I would never have noticed.",
+                quote: "Everything matched perfectly. VinXtract helped me catch an odometer fraud I would never have noticed.",
                 author: "Rolando",
                 verified: true
               }
@@ -826,10 +826,10 @@ if(formattedDate == "15/11/2025"){
       <section className="py-20 bg-blue-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            HistoriVIN - Complete Car History Reports
+            VinXtract - Complete Car History Reports
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Avoid unexpected costs and problems with our comprehensive vehicle history reports. Enter your VIN now and get a full car report delivered to your email from HistoriVIN.
+            Avoid unexpected costs and problems with our comprehensive vehicle history reports. Enter your VIN now and get a full car report delivered to your email from VinXtract.
           </p>
 
           <div className="bg-white p-8 rounded-2xl shadow-lg">
@@ -910,10 +910,10 @@ if(formattedDate == "15/11/2025"){
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              HistoriVIN: Leading the way in automotive data
+              VinXtract: Leading the way in automotive data
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Since 2020, HistoriVIN has expanded to over 35 international markets. We pull data from comprehensive databases, including national vehicle registries, insurance records, law enforcement, and government agencies.
+              Since 2020, VinXtract has expanded to over 35 international markets. We pull data from comprehensive databases, including national vehicle registries, insurance records, law enforcement, and government agencies.
             </p>
           </div>
 
@@ -1030,10 +1030,10 @@ if(formattedDate == "15/11/2025"){
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              How HistoriVIN Works
+              How VinXtract Works
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get comprehensive vehicle history reports from HistoriVIN in just three simple steps. Our advanced system processes data from hundreds of sources to give you the complete picture.
+              Get comprehensive vehicle history reports from VinXtract in just three simple steps. Our advanced system processes data from hundreds of sources to give you the complete picture.
             </p>
           </div>
 
@@ -1086,10 +1086,10 @@ if(formattedDate == "15/11/2025"){
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              HistoriVIN Comprehensive Vehicle Analysis
+              VinXtract Comprehensive Vehicle Analysis
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our reports cover every aspect of a vehicle&apos;s history. Here&apos;s what makes HistoriVIN the most trusted choice for vehicle history reports and VIN checks.
+              Our reports cover every aspect of a vehicle&apos;s history. Here&apos;s what makes VinXtract the most trusted choice for vehicle history reports and VIN checks.
             </p>
           </div>
 
@@ -1238,10 +1238,10 @@ if(formattedDate == "15/11/2025"){
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Know the Real Market Value with HistoriVIN
+              Know the Real Market Value with VinXtract
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our market analysis helps you understand if you&apos;re getting a fair deal. HistoriVIN compares similar vehicles and factors in the vehicle&apos;s history to give you accurate pricing information.
+              Our market analysis helps you understand if you&apos;re getting a fair deal. VinXtract compares similar vehicles and factors in the vehicle&apos;s history to give you accurate pricing information.
             </p>
           </div>
 
@@ -1328,10 +1328,10 @@ if(formattedDate == "15/11/2025"){
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              HistoriVIN Industry Recognition &amp; Awards
+              VinXtract Industry Recognition &amp; Awards
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              HistoriVIN has been recognized by leading automotive organizations and has received numerous awards for our comprehensive reporting and customer service.
+              VinXtract has been recognized by leading automotive organizations and has received numerous awards for our comprehensive reporting and customer service.
             </p>
           </div>
 
@@ -1378,7 +1378,7 @@ if(formattedDate == "15/11/2025"){
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions about HistoriVIN
+              Frequently Asked Questions about VinXtract
             </h2>
             <p className="text-xl text-gray-600">
               Got questions? We&apos;ve got answers. Here are the most common questions about our vehicle history reports and VIN check services.
@@ -1388,28 +1388,28 @@ if(formattedDate == "15/11/2025"){
           <div className="space-y-6">
             {[
               {
-                question: "How accurate are HistoriVIN reports?",
+                question: "How accurate are VinXtract reports?",
                 answer: "Our reports are highly accurate as we source data from over 900 trusted databases including DMV records, insurance companies, auction houses, and government agencies. However, we recommend using our reports as one factor in your decision-making process."
               },
               {
                 question: "What if I don't have the VIN number?",
-                answer: "If you don't have the VIN, you can usually find it on the dashboard visible through the windshield, on the driver side door frame, or in the vehicle documentation. HistoriVIN also offers assistance in locating VIN numbers for specific vehicles."
+                answer: "If you don't have the VIN, you can usually find it on the dashboard visible through the windshield, on the driver side door frame, or in the vehicle documentation. VinXtract also offers assistance in locating VIN numbers for specific vehicles."
               },
               {
-                question: "How long does it take to receive my HistoriVIN report?",
+                question: "How long does it take to receive my VinXtract report?",
                 answer: "Most reports are delivered instantly via email. However, we allow up to 6-12 hours for delivery to account for any technical delays or complex data compilation requirements."
               },
               {
-                question: "Can I get a refund if I'm not satisfied with my HistoriVIN report?",
-                answer: "HistoriVIN is a digital service and all sales are final. We do not offer refunds as the report is delivered immediately upon purchase. Please ensure you enter the correct VIN before purchasing."
+                question: "Can I get a refund if I'm not satisfied with my VinXtract report?",
+                answer: "VinXtract is a digital service and all sales are final. We do not offer refunds as the report is delivered immediately upon purchase. Please ensure you enter the correct VIN before purchasing."
               },
               {
-                question: "Do HistoriVIN reports cover vehicles from all countries?",
+                question: "Do VinXtract reports cover vehicles from all countries?",
                 answer: "We currently cover vehicles from over 35 countries across North America, Europe, Oceania, Africa, and the Middle East. Our coverage is continuously expanding to include more international markets."
               },
               {
-                question: "What makes HistoriVIN different from competitors?",
-                answer: "HistoriVIN offers the most comprehensive database with over 1 billion data points, faster delivery times, 24/7 customer support, and competitive pricing. We also provide market value analysis and detailed damage assessments."
+                question: "What makes VinXtract different from competitors?",
+                answer: "VinXtract offers the most comprehensive database with over 1 billion data points, faster delivery times, 24/7 customer support, and competitive pricing. We also provide market value analysis and detailed damage assessments."
               }
             ].map((faq, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md">
@@ -1473,10 +1473,10 @@ if(formattedDate == "15/11/2025"){
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              See What You Get in Every HistoriVIN Report
+              See What You Get in Every VinXtract Report
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Every HistoriVIN report is comprehensive and easy to understand. Here&apos;s a preview of what information you&apos;ll receive from our vehicle history service.
+              Every VinXtract report is comprehensive and easy to understand. Here&apos;s a preview of what information you&apos;ll receive from our vehicle history service.
             </p>
           </div>
 
@@ -1546,9 +1546,9 @@ if(formattedDate == "15/11/2025"){
               onClick={scrollToVinInput}
               className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
             >
-              Get Your Complete HistoriVIN Report Now
+              Get Your Complete VinXtract Report Now
             </button>
-            <p className="mt-4 text-gray-600">Sample report - Actual HistoriVIN reports contain much more detailed information</p>
+            <p className="mt-4 text-gray-600">Sample report - Actual VinXtract reports contain much more detailed information</p>
           </div>
         </div>
       </section>
@@ -1660,7 +1660,7 @@ if(formattedDate == "15/11/2025"){
               <div className="space-y-4">
                 <div>
                   <div className="font-medium text-gray-900">Email Support</div>
-                  <div className="text-blue-600">support@historivin.store</div>
+                  <div className="text-blue-600">support@vinxtract.store</div>
                   <div className="text-sm text-gray-600 mt-1">Response within 24-48 hours</div>
                 </div>
                 <div>
@@ -1688,7 +1688,7 @@ if(formattedDate == "15/11/2025"){
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">Website</div>
-                  <div className="text-blue-600">historivin.store</div>
+                  <div className="text-blue-600">VinXtract.store</div>
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">Service</div>
@@ -1717,12 +1717,12 @@ if(formattedDate == "15/11/2025"){
             <div className="mb-4 md:mb-0 flex items-center">
               <Image
                 src="/car-logo.webp"
-                alt="HistoriVIN"
+                alt="VinXtract"
                 width={32}
                 height={32}
                 className="mr-3"
               />
-              <div className="text-2xl font-bold text-blue-400">HistoriVIN</div>
+              <div className="text-2xl font-bold text-blue-400">VinXtract</div>
             </div>
 
             <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">
@@ -1750,9 +1750,9 @@ if(formattedDate == "15/11/2025"){
 
       {/* SEO Content for Search Engines */}
       <div className="sr-only">
-        <h1>HistoriVIN - Vehicle History Reports and VIN Checks</h1>
-        <p>HistoriVIN offers comprehensive vehicle history reports, VIN number checks, car history reports, auto history verification, used car reports, vehicle records analysis, accident history checks, mileage verification services, title record checks, automotive history reports, vehicle inspection reports, car buying assistance, and detailed vehicle analysis. Trust HistoriVIN for all your vehicle history needs.</p>
-        <p>Keywords: HistoriVIN, histori vin store, vehicle history report, VIN check, car history, auto history report, used car report, vehicle records, accident history, mileage verification, title check, car buying, automotive history, vehicle inspection, histori vin, historivin store, vin reports, car reports, auto reports</p>
+        <h1>VinXtract - Vehicle History Reports and VIN Checks</h1>
+        <p>VinXtract offers comprehensive vehicle history reports, VIN number checks, car history reports, auto history verification, used car reports, vehicle records analysis, accident history checks, mileage verification services, title record checks, automotive history reports, vehicle inspection reports, car buying assistance, and detailed vehicle analysis. Trust VinXtract for all your vehicle history needs.</p>
+        <p>Keywords: VinXtract, histori vin store, vehicle history report, VIN check, car history, auto history report, used car report, vehicle records, accident history, mileage verification, title check, car buying, automotive history, vehicle inspection, histori vin, VinXtract store, vin reports, car reports, auto reports</p>
       </div>
 
       {/* Checkout Modal */}
