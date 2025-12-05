@@ -378,7 +378,7 @@ if(formattedDate == "15/11/2025"){
                   </div>
                   <div className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    <span className="text-gray-700"><strong>Price:</strong> $20 per detailed report</span>
+                    <span className="text-gray-700"><strong>Price:</strong> $40 per detailed report</span>
                   </div>
                   <div className="flex items-center">
                     <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
@@ -510,7 +510,7 @@ if(formattedDate == "15/11/2025"){
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-600">
                     <div className="mb-2 sm:mb-0">
-                      <strong className="text-gray-900">Price:</strong> $20 per report
+                      <strong className="text-gray-900">Price:</strong> $40 per report
                     </div>
                     <div className="mb-2 sm:mb-0">
                       <strong className="text-gray-900">Delivery time:</strong> Instantly
@@ -541,7 +541,7 @@ if(formattedDate == "15/11/2025"){
                   <span className="text-sm font-semibold">✓ Trusted</span>
                 </div>
                 <div className="absolute -bottom-4 -left-4 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg">
-                  <span className="text-sm font-semibold">$20</span>
+                  <span className="text-sm font-semibold">$40</span>
                 </div>
               </div>
             </div>
@@ -557,7 +557,7 @@ if(formattedDate == "15/11/2025"){
               What You Get with Every HistoriVIN Report
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our $20 vehicle history report includes comprehensive analysis and detailed documentation delivered as a professional PDF report to your email.
+              Our $40 vehicle history report includes comprehensive analysis and detailed documentation delivered as a professional PDF report to your email.
             </p>
           </div>
 
@@ -888,7 +888,7 @@ if(formattedDate == "15/11/2025"){
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
               <div className="text-center">
-                <div className="font-semibold text-gray-900">One-time fee: $20</div>
+                <div className="font-semibold text-gray-900">One-time fee: $40</div>
               </div>
               <div className="text-center">
                 <div className="font-semibold text-gray-900">Report delivered within 6–12 hours</div>
@@ -1798,7 +1798,7 @@ if(formattedDate == "15/11/2025"){
                   onClick={openPaddleCheckout}
                   style={modalStyles.proceedButton}
                 >
-                  Proceed to Payment - $20
+                  Proceed to Payment - $40
                 </button>
                 <button
                   onClick={closeCheckoutModal}

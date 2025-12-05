@@ -106,7 +106,7 @@ export const metadata = {
     "msapplication-TileImage": "/car-logo.webp",
     "theme-color": "#2563eb",
     // Enhanced SERP meta tags
-    "price": "USD 20",
+    "price": "USD 40",
     "availability": "InStock",
     "category": "Automotive Services",
     "rating": "4.8",
@@ -272,7 +272,7 @@ export default function RootLayout({ children }) {
               },
               "offers": {
                 "@type": "Offer",
-                "price": "20",
+                "price": "40",
                 "priceCurrency": "USD",
                 "availability": "https://schema.org/InStock",
                 "seller": {

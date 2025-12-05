@@ -303,7 +303,7 @@ export default function Pricing() {
               What is Included in Every Report
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              For $20, you get a comprehensive vehicle history analysis with data from multiple trusted sources.
+              For $40, you get a comprehensive vehicle history analysis with data from multiple trusted sources.
             </p>
           </div>
 
@@ -449,12 +449,12 @@ export default function Pricing() {
           <div className="space-y-6">
             {[
               {
-                question: "Why does HistoriVIN cost $20?",
+                question: "Why does HistoriVIN cost $40?",
                 answer: "Our pricing reflects the comprehensive nature of our reports and the costs associated with accessing premium automotive databases. We provide detailed analysis and professional report formatting - all for less than the cost of a tank of gas."
               },
               {
                 question: "Are there any hidden fees or recurring charges?",
-                answer: "No. The $20 price is a one-time payment per report. There are no hidden fees, monthly subscriptions, or recurring charges. You pay once and receive your complete vehicle history report."
+                answer: "No. The $40 price is a one-time payment per report. There are no hidden fees, monthly subscriptions, or recurring charges. You pay once and receive your complete vehicle history report."
               },
               {
                 question: "Can I get a refund if I'm not satisfied?",
@@ -462,11 +462,11 @@ export default function Pricing() {
               },
               {
                 question: "How does your pricing compare to competitors?",
-                answer: "Our $20 price is competitive with other major vehicle history providers. However, we believe our comprehensive data coverage, fast delivery, and detailed reporting provide exceptional value."
+                answer: "Our $40 price is competitive with other major vehicle history providers. However, we believe our comprehensive data coverage, fast delivery, and detailed reporting provide exceptional value."
               },
               {
                 question: "Do you offer discounts for multiple reports?",
-                answer: "Currently, each report is priced individually at $20. We may offer promotional pricing from time to time, but each VIN requires a separate report purchase."
+                answer: "Currently, each report is priced individually at $40. We may offer promotional pricing from time to time, but each VIN requires a separate report purchase."
               },
               {
                 question: "What if the VIN I entered is incorrect?",
@@ -497,13 +497,13 @@ export default function Pricing() {
               onClick={openModal}
               className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg inline-block"
             >
-              Get Started for $20
+              Get Started for $40
             </button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
             <div className="text-center">
-              <div className="font-semibold text-white">One-time fee: $20</div>
+              <div className="font-semibold text-white">One-time fee: $40</div>
               <div className="text-blue-100">No recurring charges</div>
             </div>
             <div className="text-center">
