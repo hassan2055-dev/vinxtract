@@ -355,103 +355,193 @@ if(formattedDate == "15/11/2025"){
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Content */}
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                VinXtract: Comprehensive Vehicle History Reports<br />
-                <span className="text-blue-600">Uncover the complete story of any vehicle</span>
+              {/* Trust Badge */}
+              <div className="inline-flex items-center bg-white rounded-full px-4 py-2 shadow-lg mb-6 animate-fadeInUp">
+                <span className="text-green-500 text-xl mr-2">✓</span>
+                <span className="text-sm font-semibold text-gray-700">Trusted by 100,000+ Car Buyers</span>
+              </div>
+
+              <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight animate-fadeInUp delay-100">
+                Know Before You Buy<br />
+                <span className="gradient-text-blue">Complete Vehicle History in Minutes</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl">
-                <strong>VinXtract is a professional vehicle history report service</strong> that provides comprehensive VIN checks and detailed automotive analysis. Our service delivers complete vehicle histories including accident records, title information, mileage verification, safety recalls, market value analysis, and ownership history. Trusted by car buyers, sellers, and dealers worldwide for making informed vehicle purchasing decisions.
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl animate-fadeInUp delay-200">
+                Don&apos;t risk buying a lemon! Get instant access to <strong>accident history, title issues, odometer fraud,</strong> and more. Our comprehensive reports help you make confident decisions and negotiate better prices.
               </p>
 
               {/* Key Service Highlights */}
-              <div className="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-md mb-8 max-w-3xl mx-auto lg:mx-0">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">🚗 Professional Vehicle History Service</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                  <div className="flex items-center">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    <span className="text-gray-700"><strong>Service:</strong> Complete VIN analysis & reporting</span>
+              <div className="bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-xl mb-8 max-w-3xl mx-auto lg:mx-0 border border-blue-100 animate-fadeInUp delay-300">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="text-center">
+                    <div className="text-3xl mb-2 animate-bounce">⚡</div>
+                    <div className="text-sm font-semibold text-gray-900">Instant</div>
+                    <div className="text-xs text-gray-600">Delivery</div>
                   </div>
-                  <div className="flex items-center">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    <span className="text-gray-700"><strong>Price:</strong> $40 per detailed report</span>
+                  <div className="text-center">
+                    <div className="text-3xl mb-2 animate-pulse">💰</div>
+                    <div className="text-sm font-semibold text-gray-900">$40</div>
+                    <div className="text-xs text-gray-600">One-time</div>
                   </div>
-                  <div className="flex items-center">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    <span className="text-gray-700"><strong>Delivery:</strong> Instantly via email</span>
+                  <div className="text-center">
+                    <div className="text-3xl mb-2">🔒</div>
+                    <div className="text-sm font-semibold text-gray-900">100%</div>
+                    <div className="text-xs text-gray-600">Secure</div>
                   </div>
-                  <div className="flex items-center">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                    <span className="text-gray-700"><strong>Coverage:</strong> Comprehensive database access</span>
+                  <div className="text-center">
+                    <div className="text-3xl mb-2">✓</div>
+                    <div className="text-sm font-semibold text-gray-900">Verified</div>
+                    <div className="text-xs text-gray-600">Data</div>
                   </div>
                 </div>
               </div>
 
+              {/* Urgency Element */}
+              <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg mb-8 shadow-lg animate-pulse inline-block">
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                  </svg>
+                  <span className="font-semibold">🔥 247 reports ordered today!</span>
+                </div>
+              </div>
+
               {/* VIN Input Form */}
-              <div id="vin-input-section" className="max-w-2xl mx-auto lg:mx-0 bg-white p-8 rounded-2xl shadow-lg">
+              <div id="vin-input-section" className="max-w-2xl mx-auto lg:mx-0 bg-white p-8 rounded-2xl shadow-2xl border-2 border-blue-500 animate-scaleIn delay-400">
+                <div className="mb-6 text-center">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Get Your Report in 3 Steps</h3>
+                  <p className="text-gray-600">Join thousands making smarter car buying decisions</p>
+                </div>
+
                 <form onSubmit={handleVinSubmit} className="space-y-4">
                   <div className="flex flex-col sm:flex-row gap-4">
                     <div className="flex-1">
+                      <label className="block text-sm font-semibold text-gray-700 mb-2">
+                        1. Enter VIN Number
+                      </label>
                       <input
                         id="vin-input-field"
                         type="text"
-                        placeholder="Enter VIN number"
+                        placeholder="Enter 17-digit VIN"
                         value={vinInput}
                         onChange={handleVinChange}
-                        className="w-full text-gray-700 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-lg"
+                        maxLength="17"
+                        className="w-full text-gray-700 px-4 py-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-lg font-semibold transition-all hover:border-blue-300"
                         required
                       />
                       <div className="mt-2 flex justify-between items-center text-sm">
                         <span className="text-gray-500">
-                          VIN entered
+                          {vinInput.length}/17 characters
                         </span>
+                        {vinInput.length === 17 && (
+                          <span className="text-green-600 font-semibold flex items-center">
+                            <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                            Valid
+                          </span>
+                        )}
                       </div>
                     </div>
                   </div>
 
                   <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      2. Your Email Address
+                    </label>
                     <input
                       type="email"
-                      placeholder="Enter your email address"
+                      placeholder="you@example.com"
                       value={emailInput}
                       onChange={(e) => setEmailInput(e.target.value)}
-                      className="w-full text-gray-700 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-lg"
+                      className="w-full text-gray-700 px-4 py-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-lg transition-all hover:border-blue-300"
                       required
                     />
-                    <div className="mt-1 text-sm text-gray-500">
-                      Your vehicle history report will be sent to this email
+                    <div className="mt-1 text-sm text-gray-500 flex items-center">
+                      <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                      </svg>
+                      Report delivered instantly to your inbox
                     </div>
                   </div>
 
                   <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      3. Vehicle Model (Optional but Recommended)
+                    </label>
                     <input
                       type="text"
-                      placeholder="Enter car model (e.g., Honda Civic, BMW X5, Toyota Camry)"
+                      placeholder="e.g., Honda Civic, BMW X5, Toyota Camry"
                       value={carModelInput}
                       onChange={(e) => setCarModelInput(e.target.value)}
-                      className="w-full text-gray-700 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-lg"
+                      className="w-full text-gray-700 px-4 py-4 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-lg transition-all hover:border-blue-300"
                       required
                     />
                     <div className="mt-1 text-sm text-gray-500">
-                      Help us provide more accurate information about your vehicle
+                      Helps us provide more accurate pricing data
                     </div>
                   </div>
 
                   <button
                     type="submit"
                     disabled={!vinInput.trim() || !emailInput.trim() || !carModelInput.trim() || isSubmitting}
-                    className="w-full bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors font-semibold text-lg"
+                    className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-5 rounded-xl hover:from-blue-700 hover:to-indigo-700 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed transition-all font-bold text-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:translate-y-0 relative overflow-hidden group"
                   >
-                    {isSubmitting ? 'Submitting...' : 'Get report'}
+                    <span className="relative z-10">
+                      {isSubmitting ? (
+                        <span className="flex items-center justify-center">
+                          <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Processing...
+                        </span>
+                      ) : (
+                        <span className="flex items-center justify-center">
+                          🚗 Get My Vehicle Report - $40
+                          <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                          </svg>
+                        </span>
+                      )}
+                    </span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transform -skew-x-12 group-hover:translate-x-full transition-all duration-700"></div>
                   </button>
+
+                  {/* Trust Indicators Below Button */}
+                  <div className="mt-4 flex items-center justify-center space-x-4 text-sm text-gray-600">
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      SSL Secured
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      Money-Back Guarantee
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      Instant Delivery
+                    </div>
+                  </div>
                 </form>
-                <button className="text-blue-600 hover:text-blue-700 mt-4 text-sm underline">
-                  Don&apos;t have a VIN?
-                </button>
 
                 <div className="mt-6 text-left">
                   <h3 className="font-semibold text-gray-900 mb-3">We check:</h3>
@@ -526,7 +616,7 @@ if(formattedDate == "15/11/2025"){
               </div>
             </div>
 
-            {/* Right side - Image */}
+            {/* Right side - Trust Elements */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                 <Image
@@ -534,14 +624,51 @@ if(formattedDate == "15/11/2025"){
                   alt="Vehicle History Report Cards"
                   width={512}
                   height={400}
-                  className="w-full max-w-lg h-auto rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                  className="w-full max-w-lg h-auto rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 animate-slideInRight"
                 />
-                {/* Optional overlay with floating elements */}
-                <div className="absolute -top-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-full shadow-lg">
-                  <span className="text-sm font-semibold">✓ Trusted</span>
+                {/* Animated overlay elements */}
+                <div className="absolute -top-4 -right-4 bg-green-500 text-white px-6 py-3 rounded-full shadow-xl animate-bounce z-10">
+                  <span className="text-sm font-bold">✓ Trusted by 100K+</span>
                 </div>
-                <div className="absolute -bottom-4 -left-4 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg">
-                  <span className="text-sm font-semibold">$40</span>
+                <div className="absolute top-1/2 -left-8 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-xl transform -rotate-6 animate-fadeIn delay-500">
+                  <div className="text-xs">⭐⭐⭐⭐⭐</div>
+                  <div className="text-xs font-bold">4.8/5 Rating</div>
+                </div>
+
+                {/* Social Proof Cards */}
+                <div className="mt-8 space-y-4 animate-fadeIn delay-300">
+                  <div className="bg-white p-4 rounded-xl shadow-lg border-l-4 border-green-500 relative z-20">
+                    <div className="flex items-center mb-2">
+                      <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                        S
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900">Sarah M.</div>
+                        <div className="text-xs text-gray-500">2 hours ago</div>
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-700">&quot;Saved me $3,000! Found hidden accident damage.&quot;</p>
+                    <div className="text-yellow-400 text-sm mt-1">⭐⭐⭐⭐⭐</div>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-xl shadow-lg border-l-4 border-blue-500 animate-fadeIn delay-400 relative z-20">
+                    <div className="flex items-center mb-2">
+                      <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                        M
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900">Michael R.</div>
+                        <div className="text-xs text-gray-500">5 hours ago</div>
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-700">&quot;Instant report! Super detailed and accurate.&quot;</p>
+                    <div className="text-yellow-400 text-sm mt-1">⭐⭐⭐⭐⭐</div>
+                  </div>
+
+                  {/* Price Badge - Below Reviews */}
+                  <div className="mt-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full shadow-xl animate-pulse inline-block">
+                    <span className="text-sm font-bold">Only $40</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1738,14 +1865,32 @@ if(formattedDate == "15/11/2025"){
         </div>
       </footer>
 
-      {/* Cart Widget */}
-      <div className="fixed bottom-4 right-4 z-50">
-        <button className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13v6a2 2 0 002 2h6a2 2 0 002-2v-6" />
-          </svg>
-          <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+      {/* Sticky CTA Widget */}
+      <div className="fixed bottom-6 right-6 z-[9999] animate-fadeIn delay-500">
+        <button 
+          onClick={scrollToVinInput}
+          className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all transform hover:scale-110 active:scale-95 animate-pulse group"
+        >
+          <div className="flex items-center">
+            <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+            </svg>
+            <span className="font-bold">Get Report $40</span>
+          </div>
+          <span className="absolute -top-2 -right-2 bg-yellow-400 text-gray-900 text-xs font-bold rounded-full w-8 h-8 flex items-center justify-center animate-bounce">🔥</span>
         </button>
+      </div>
+
+      {/* Live Activity Banner */}
+      <div className="fixed bottom-6 left-6 z-[9999] bg-white rounded-lg shadow-xl p-4 max-w-sm animate-fadeInUp hidden md:block">
+        <div className="flex items-center">
+          <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-3"></div>
+          <div>
+            <div className="text-sm font-semibold text-gray-900">John from Texas</div>
+            <div className="text-xs text-gray-600">Just purchased a report</div>
+          </div>
+        </div>
       </div>
 
       {/* SEO Content for Search Engines */}
