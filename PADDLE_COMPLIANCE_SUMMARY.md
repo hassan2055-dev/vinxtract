@@ -92,7 +92,7 @@ Before submitting to Paddle, verify:
 ## 📞 Support Information
 
 Your site now includes comprehensive contact information:
-- **Email**: support@vinxtract.store
+- **Email**: support@vinxtract.com
 - **Company**: VinXtract LLC
 - **Service**: Professional Vehicle History Reports
 - **Response Time**: 24-48 hours

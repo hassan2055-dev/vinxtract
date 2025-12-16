@@ -48,7 +48,7 @@ export default function ThankYou() {
           </h1>
           
           <p className="text-xl text-gray-600 mb-8">
-            Your VinXtractStore VIN report request has been successfully submitted and payment has been processed. Your comprehensive vehicle history report will be delivered soon. For any query feel free to message us on support@vinxtract.store
+            Your VinXtractStore VIN report request has been successfully submitted and payment has been processed. Your comprehensive vehicle history report will be delivered soon. For any query feel free to message us on support@vinxtract.com
           </p>
 
           {/* Order Details */}

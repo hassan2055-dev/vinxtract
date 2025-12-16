@@ -94,7 +94,7 @@ export default function About() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Website:</span>
-                  <span className="font-semibold text-blue-600">vinxtract.store</span>
+                  <span className="font-semibold text-blue-600">vinxtract.com</span>
                 </div>
               </div>
             </div>
@@ -243,7 +243,7 @@ export default function About() {
               <div className="space-y-4">
                 <div>
                   <div className="font-medium text-gray-900">Email Support</div>
-                  <div className="text-gray-600">support@vinxtract.store</div>
+                  <div className="text-gray-600">support@vinxtract.com</div>
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">Response Time</div>
@@ -265,7 +265,7 @@ export default function About() {
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">Website</div>
-                  <div className="text-gray-600">vinxtract.store</div>
+                  <div className="text-gray-600">vinxtract.com</div>
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">Service</div>

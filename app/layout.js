@@ -19,9 +19,9 @@ export const metadata = {
   creator: "VinXtract",
   publisher: "VinXtract",
   // Enhanced meta tags for better SERP control
-  metadataBase: new URL("https://vinxtract.store"),
+  metadataBase: new URL("https://vinxtract.com"),
   alternates: {
-    canonical: "https://vinxtract.store",
+    canonical: "https://vinxtract.com",
     languages: {
       "en-US": "https://vinxtract.store",
       "x-default": "https://vinxtract.store"
@@ -145,8 +145,8 @@ export default function RootLayout({ children }) {
               "@type": "Organization",
               "name": "VinXtractStore",
               "alternateName": "VinXtract",
-              "url": "https://vinxtract.store",
-              "logo": "https://vinxtract.store/car-logo.webp",
+              "url": "https://vinxtract.com",
+              "logo": "https://vinxtract.com/car-logo.webp",
               "description": "Leading provider of comprehensive vehicle history reports and VIN checks for car buyers worldwide.",
               "sameAs": [
                 "https://twitter.com/vinxtract",
@@ -201,11 +201,11 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "VinXtractStore",
-              "url": "https://vinxtract.store",
+              "url": "https://vinxtract.com",
               "description": "Get comprehensive vehicle history reports and VIN checks. Uncover accident history, verify mileage, check title records, and get market value analysis.",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://vinxtract.store/?vin={search_term_string}",
+                "target": "https://vinxtract.com/?vin={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })

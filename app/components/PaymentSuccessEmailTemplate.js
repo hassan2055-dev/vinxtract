@@ -48,7 +48,7 @@ export default function PaymentSuccessEmailTemplate({ customerEmail, customerNam
 
       <p>
         If you have any questions or need assistance, please don&apos;t hesitate to contact us at 
-        <a href="mailto:support@vinxtract.store" style={{ color: '#16a34a' }}> car.check.store@gmail.com</a>
+        <a href="mailto:support@vinxtract.com" style={{ color: '#16a34a' }}> car.check.store@gmail.com</a>
       </p>
 
       <p>Thank you for choosing CarCheck!</p>

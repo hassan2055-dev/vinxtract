@@ -1787,7 +1787,7 @@ if(formattedDate == "15/11/2025"){
               <div className="space-y-4">
                 <div>
                   <div className="font-medium text-gray-900">Email Support</div>
-                  <div className="text-blue-600">support@vinxtract.store</div>
+                  <div className="text-blue-600">support@vinxtract.com</div>
                   <div className="text-sm text-gray-600 mt-1">Response within 24-48 hours</div>
                 </div>
                 <div>
@@ -1815,7 +1815,7 @@ if(formattedDate == "15/11/2025"){
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">Website</div>
-                  <div className="text-blue-600">VinXtract.store</div>
+                  <div className="text-blue-600">VinXtract.com</div>
                 </div>
                 <div>
                   <div className="font-medium text-gray-900">Service</div>
