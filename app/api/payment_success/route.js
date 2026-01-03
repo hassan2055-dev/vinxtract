@@ -65,9 +65,11 @@ export async function POST(request) {
       const currency = eventData.data?.items?.[0]?.price?.unit_price?.currency_code || 'USD';
       const name = eventData.data?.payments?.[0]?.method_details?.card?.cardholder_name || 'Valued Customer';
       
-      // Get custom data (VIN, email, etc.)
+      // Get custom data (VIN, email, tier info, etc.)
       const customData = eventData.data?.custom_data || {};
       const vinNumber = customData.vin || 'N/A';
+      const tierName = customData.tierName || 'Standard';
+      const tierPrice = customData.tierPrice || 50;
       const customerEmailFromCustomData = customData.email;
 
       if (customerId) {
@@ -105,12 +107,13 @@ export async function POST(request) {
                       <p><strong>Transaction ID:</strong> ${transactionId}</p>
                       <p><strong>Product:</strong> ${productName}</p>
                       <p><strong>Amount:</strong> ${currency} ${(amount / 100).toFixed(2)}</p>
+                      <p><strong>Report Tier:</strong> ${tierName} ($${tierPrice})</p>
                       <p><strong>Customer Email:</strong> ${customerEmail}</p>
                       <p><strong>Customer Name:</strong> ${customerName}</p>
                       <p><strong>VIN:</strong> ${vinNumber}</p>
                     </div>
 
-                    <p style="color: #d97706; font-weight: bold;">⚠️ Action Required: Please prepare and send the vehicle history report to the customer.</p>
+                    <p style="color: #d97706; font-weight: bold;">⚠️ Action Required: Please prepare and send the ${tierName} vehicle history report to the customer.</p>
                     
                     <p>Best regards,<br/>VinXtract System</p>
                   </div>
@@ -153,12 +156,13 @@ export async function POST(request) {
                       <p><strong>Transaction ID:</strong> ${transactionId}</p>
                       <p><strong>Product:</strong> ${productName}</p>
                       <p><strong>Amount:</strong> ${currency} ${(amount / 100).toFixed(2)}</p>
+                      <p><strong>Report Tier:</strong> ${tierName} ($${tierPrice})</p>
                       <p><strong>Customer Email:</strong> ${customerEmailFromCustomData}</p>
                       <p><strong>Customer Name:</strong> ${customData.name || 'Valued Customer'}</p>
                       <p><strong>VIN:</strong> ${vinNumber}</p>
                     </div>
 
-                    <p style="color: #d97706; font-weight: bold;">⚠️ Action Required: Please prepare and send the vehicle history report to the customer.</p>
+                    <p style="color: #d97706; font-weight: bold;">⚠️ Action Required: Please prepare and send the ${tierName} vehicle history report to the customer.</p>
                     
                     <p>Best regards,<br/>VinXtract System</p>
                   </div>

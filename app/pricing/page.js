@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 export default function Pricing() {
   const [showModal, setShowModal] = useState(false);
+  const [selectedTier, setSelectedTier] = useState('standard');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,10 +13,35 @@ export default function Pricing() {
   });
   const [loading, setLoading] = useState(false);
 
+  // Pricing Tiers Configuration
+  const PRICING_TIERS = {
+    basic: {
+      name: 'Basic',
+      price: 30,
+      priceId: 'pri_01k8bkwee1djsx23kqk4c3qjgb',
+      description: 'Essential vehicle history',
+      features: ['Basic accident history', 'Ownership records', 'Mileage check']
+    },
+    standard: {
+      name: 'Standard',
+      price: 50,
+      priceId: 'pri_01k8bm1n7k6kdkb62d0e5r1nha',
+      description: 'Complete vehicle history',
+      features: ['Full accident history', 'Complete ownership records', 'Mileage verification', 'Title information', 'Safety recalls']
+    },
+    premium: {
+      name: 'Premium',
+      price: 70,
+      priceId: 'pri_01k8bm2ygfy97ehkedx0361ynh',
+      description: 'Most comprehensive report',
+      features: ['Full accident history', 'Complete ownership records', 'Mileage verification', 'Title information', 'Safety recalls', 'Market value analysis', 'Detailed damage assessment']
+    }
+  }
+
   // Paddle Configuration
   const CONFIG = {
     clientToken: process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN,
-    priceId: process.env.NEXT_PUBLIC_PADDLE_PRICE_ID
+    priceId: PRICING_TIERS[selectedTier].priceId
   };
 
   // Modal styles
@@ -177,7 +203,10 @@ export default function Pricing() {
         customData: {
           "name": customerName,
           "email": customerEmail,
-          "vin": customerVin
+          "vin": customerVin,
+          "tier": selectedTier,
+          "tierName": PRICING_TIERS[selectedTier].name,
+          "tierPrice": PRICING_TIERS[selectedTier].price
         }
       });
 
@@ -245,51 +274,136 @@ export default function Pricing() {
 
       {/* Main Pricing Section */}
       <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-            {/* Popular Badge */}
-            <div className="bg-blue-600 text-white text-center py-3">
-              <span className="font-semibold text-sm uppercase tracking-wide">Most Popular • Trusted by Thousands</span>
-            </div>
-            
-            <div className="p-12 text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Vehicle History Report</h2>
-              <p className="text-gray-600 mb-8">Complete vehicle analysis and history check</p>
-              
-              <div className="mb-8">
-                <div className="flex items-center justify-center mb-4">
-                  <span className="text-6xl font-bold text-blue-600">$39</span>
-                  <span className="text-2xl text-gray-500 ml-2">.99</span>
-                </div>
-                <p className="text-gray-600">Per vehicle report • One-time payment</p>
-              </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Choose Your Report Type
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Select the level of detail you need for your vehicle history report.
+            </p>
+          </div>
 
-              <div className="mb-8">
-                <button 
-                  onClick={openModal}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg inline-block"
-                >
-                  Get Your Report Now
-                </button>
-                <p className="text-sm text-gray-500 mt-3">Instant delivery • No recurring charges</p>
-              </div>
-
-              {/* Important Notice */}
-              <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-8 text-left">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                    </svg>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {Object.entries(PRICING_TIERS).map(([key, tier]) => (
+              <div
+                key={key}
+                onClick={() => setSelectedTier(key)}
+                className={`rounded-2xl shadow-lg overflow-hidden cursor-pointer transition-all transform hover:scale-105 ${
+                  selectedTier === key
+                    ? 'ring-2 ring-blue-600 bg-blue-50 scale-105'
+                    : 'bg-white hover:shadow-xl'
+                }`}
+              >
+                {key === 'premium' && (
+                  <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center py-2">
+                    <span className="font-semibold text-sm">MOST POPULAR</span>
                   </div>
-                  <div className="ml-3">
-                    <h3 className="text-sm font-medium text-red-800">Digital Service - No Refunds</h3>
-                    <div className="mt-1 text-sm text-red-700">
-                      <p>This is a digital service with instant delivery. All sales are final and non-refundable.</p>
+                )}
+                
+                <div className="p-8 text-center">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
+                  <p className="text-gray-600 mb-6">{tier.description}</p>
+                  
+                  <div className="mb-8">
+                    <div className="flex items-center justify-center mb-2">
+                      <span className="text-5xl font-bold text-blue-600">${tier.price}</span>
                     </div>
+                    <p className="text-gray-600 text-sm">One-time payment</p>
+                  </div>
+
+                  <button
+                    onClick={() => {
+                      setSelectedTier(key);
+                      openModal();
+                    }}
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors mb-6 ${
+                      selectedTier === key
+                        ? 'bg-blue-600 text-white hover:bg-blue-700'
+                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                    }`}
+                  >
+                    Get {tier.name} Report
+                  </button>
+
+                  <div className="text-left">
+                    <p className="text-sm font-semibold text-gray-900 mb-3">Includes:</p>
+                    <ul className="space-y-2">
+                      {tier.features.map((feature, idx) => (
+                        <li key={idx} className="text-sm text-gray-600 flex items-start">
+                          <svg className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+
+          {/* Comparison */}
+          <div className="bg-gray-50 rounded-lg p-8 mb-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+              How They Compare
+            </h3>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b-2 border-gray-300">
+                    <th className="text-left py-3 px-4 font-semibold text-gray-900">Feature</th>
+                    <th className="text-center py-3 px-4 font-semibold text-gray-900">Basic</th>
+                    <th className="text-center py-3 px-4 font-semibold text-gray-900">Standard</th>
+                    <th className="text-center py-3 px-4 font-semibold text-gray-900">Premium</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-3 px-4 text-gray-900">Accident History</td>
+                    <td className="text-center py-3 px-4">Basic</td>
+                    <td className="text-center py-3 px-4">✓ Full</td>
+                    <td className="text-center py-3 px-4">✓ Full</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-3 px-4 text-gray-900">Ownership Records</td>
+                    <td className="text-center py-3 px-4">✓</td>
+                    <td className="text-center py-3 px-4">✓ Complete</td>
+                    <td className="text-center py-3 px-4">✓ Complete</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-3 px-4 text-gray-900">Mileage Verification</td>
+                    <td className="text-center py-3 px-4">✓</td>
+                    <td className="text-center py-3 px-4">✓</td>
+                    <td className="text-center py-3 px-4">✓</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-3 px-4 text-gray-900">Title Information</td>
+                    <td className="text-center py-3 px-4">-</td>
+                    <td className="text-center py-3 px-4">✓</td>
+                    <td className="text-center py-3 px-4">✓</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-3 px-4 text-gray-900">Safety Recalls</td>
+                    <td className="text-center py-3 px-4">-</td>
+                    <td className="text-center py-3 px-4">✓</td>
+                    <td className="text-center py-3 px-4">✓</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-3 px-4 text-gray-900">Market Value Analysis</td>
+                    <td className="text-center py-3 px-4">-</td>
+                    <td className="text-center py-3 px-4">-</td>
+                    <td className="text-center py-3 px-4">✓</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4 text-gray-900">Detailed Damage Assessment</td>
+                    <td className="text-center py-3 px-4">-</td>
+                    <td className="text-center py-3 px-4">-</td>
+                    <td className="text-center py-3 px-4">✓</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -449,12 +563,16 @@ export default function Pricing() {
           <div className="space-y-6">
             {[
               {
-                question: "Why does VinXtract cost $40?",
-                answer: "Our pricing reflects the comprehensive nature of our reports and the costs associated with accessing premium automotive databases. We provide detailed analysis and professional report formatting - all for less than the cost of a tank of gas."
+                question: "What's the difference between the three tiers?",
+                answer: "Basic ($30) includes essential information like accident history, ownership records, and mileage checks. Standard ($50) adds complete title information and safety recalls. Premium ($70) includes everything plus market value analysis and detailed damage assessment."
+              },
+              {
+                question: "Which tier should I choose?",
+                answer: "Choose Basic if you just need essential information. Choose Standard for a complete overview (most popular). Choose Premium if you're considering a purchase and want comprehensive analysis including market value and detailed damage assessment."
               },
               {
                 question: "Are there any hidden fees or recurring charges?",
-                answer: "No. The $40 price is a one-time payment per report. There are no hidden fees, monthly subscriptions, or recurring charges. You pay once and receive your complete vehicle history report."
+                answer: "No. All pricing is one-time per report. There are no hidden fees, monthly subscriptions, or recurring charges. You pay once and receive your complete vehicle history report."
               },
               {
                 question: "Can I get a refund if I'm not satisfied?",
@@ -462,15 +580,11 @@ export default function Pricing() {
               },
               {
                 question: "How does your pricing compare to competitors?",
-                answer: "Our $40 price is competitive with other major vehicle history providers. However, we believe our comprehensive data coverage, fast delivery, and detailed reporting provide exceptional value."
+                answer: "Our pricing is competitive with other major vehicle history providers. We offer three flexible options to meet different needs, from budget-conscious buyers to those who want the most comprehensive analysis."
               },
               {
                 question: "Do you offer discounts for multiple reports?",
-                answer: "Currently, each report is priced individually at $40. We may offer promotional pricing from time to time, but each VIN requires a separate report purchase."
-              },
-              {
-                question: "What if the VIN I entered is incorrect?",
-                answer: "If you enter an incorrect VIN, we will still generate a report for the VIN provided. Since this is a digital service, we cannot offer refunds for user input errors. Please double-check your VIN before purchasing."
+                answer: "Currently, each report is priced individually. We may offer promotional pricing from time to time, but each VIN requires a separate report purchase."
               }
             ].map((faq, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md">
@@ -497,14 +611,14 @@ export default function Pricing() {
               onClick={openModal}
               className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg inline-block"
             >
-              Get Started for $40
+              Get Started - From ${PRICING_TIERS.basic.price}
             </button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
             <div className="text-center">
-              <div className="font-semibold text-white">One-time fee: $40</div>
-              <div className="text-blue-100">No recurring charges</div>
+              <div className="font-semibold text-white">Three pricing options</div>
+              <div className="text-blue-100">$30 - $70 per report</div>
             </div>
             <div className="text-center">
               <div className="font-semibold text-white">Fast delivery: 6-12 hours</div>

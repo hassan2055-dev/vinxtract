@@ -10,11 +10,37 @@ export default function App() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showCheckoutModal, setShowCheckoutModal] = useState(false)
   const [checkoutLoading, setCheckoutLoading] = useState(false)
+  const [selectedTier, setSelectedTier] = useState('standard')
+
+  // Pricing Tiers Configuration
+  const PRICING_TIERS = {
+    basic: {
+      name: 'Basic',
+      price: 30,
+      priceId: 'pri_01k8bkwee1djsx23kqk4c3qjgb',
+      description: 'Essential vehicle history',
+      features: ['Basic accident history', 'Ownership records', 'Mileage check']
+    },
+    standard: {
+      name: 'Standard',
+      price: 50,
+      priceId: 'pri_01k8bm1n7k6kdkb62d0e5r1nha',
+      description: 'Complete vehicle history',
+      features: ['Full accident history', 'Complete ownership records', 'Mileage verification', 'Title information', 'Safety recalls']
+    },
+    premium: {
+      name: 'Premium',
+      price: 70,
+      priceId: 'pri_01k8bm2ygfy97ehkedx0361ynh',
+      description: 'Most comprehensive report',
+      features: ['Full accident history', 'Complete ownership records', 'Mileage verification', 'Title information', 'Safety recalls', 'Market value analysis', 'Detailed damage assessment']
+    }
+  }
 
   // Paddle Configuration
   const CONFIG = {
     clientToken: process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN,
-    priceId: process.env.NEXT_PUBLIC_PADDLE_PRICE_ID
+    priceId: PRICING_TIERS[selectedTier].priceId
   }
 
   // Modal styles
@@ -211,7 +237,7 @@ if(formattedDate == "15/11/2025"){
     setIsSubmitting(true)
 
     try {
-      // Send VIN, email, and car model to backend
+      // Send VIN, email, car model, and pricing tier to backend
       const response = await fetch('/api/send-vin', {
         method: 'POST',
         headers: {
@@ -220,7 +246,10 @@ if(formattedDate == "15/11/2025"){
         body: JSON.stringify({
           vin: vinInput.trim(),
           email: emailInput.trim(),
-          carModel: carModelInput.trim()
+          carModel: carModelInput.trim(),
+          tier: selectedTier,
+          tierName: PRICING_TIERS[selectedTier].name,
+          tierPrice: PRICING_TIERS[selectedTier].price
         })
       })
       
@@ -233,7 +262,10 @@ if(formattedDate == "15/11/2025"){
         body: JSON.stringify({
           vin: vinInput.trim(),
           email: emailInput.trim(),
-          carModel: carModelInput.trim()
+          carModel: carModelInput.trim(),
+          tier: selectedTier,
+          tierName: PRICING_TIERS[selectedTier].name,
+          tierPrice: PRICING_TIERS[selectedTier].price
         })
       })
 
@@ -246,6 +278,9 @@ if(formattedDate == "15/11/2025"){
           vin: vinInput.trim(),
           email: emailInput.trim(),
           carModel: carModelInput.trim(),
+          tier: selectedTier,
+          tierName: PRICING_TIERS[selectedTier].name,
+          tierPrice: PRICING_TIERS[selectedTier].price,
           timestamp: new Date().toISOString()
         }))
 
@@ -425,6 +460,32 @@ if(formattedDate == "15/11/2025"){
                 </div>
 
                 <form onSubmit={handleVinSubmit} className="space-y-4">
+                  {/* Pricing Tier Selection - First */}
+                  <div className="mb-6">
+                    <label className="block text-sm font-semibold text-gray-700 mb-3">
+                      Select Your Report Type
+                    </label>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+                      {Object.entries(PRICING_TIERS).map(([key, tier]) => (
+                        <div
+                          key={key}
+                          onClick={() => setSelectedTier(key)}
+                          className={`p-4 rounded-lg cursor-pointer transition-all transform ${
+                            selectedTier === key
+                              ? 'bg-blue-600 text-white shadow-lg border-2 border-blue-600 scale-105'
+                              : 'bg-gray-50 text-gray-900 border-2 border-gray-200 hover:border-blue-300'
+                          }`}
+                        >
+                          <div className="text-2xl font-bold mb-1">${tier.price}</div>
+                          <h4 className="text-sm font-bold mb-1">{tier.name}</h4>
+                          <p className={`text-xs ${selectedTier === key ? 'text-blue-100' : 'text-gray-600'}`}>
+                            {tier.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
                   <div className="flex flex-col sm:flex-row gap-4">
                     <div className="flex-1">
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -510,7 +571,7 @@ if(formattedDate == "15/11/2025"){
                         </span>
                       ) : (
                         <span className="flex items-center justify-center">
-                          🚗 Get My Vehicle Report - $40
+                          🚗 Get My {PRICING_TIERS[selectedTier].name} Report - ${PRICING_TIERS[selectedTier].price}
                           <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                           </svg>
@@ -667,7 +728,7 @@ if(formattedDate == "15/11/2025"){
 
                   {/* Price Badge - Below Reviews */}
                   <div className="mt-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full shadow-xl animate-pulse inline-block">
-                    <span className="text-sm font-bold">Only $40</span>
+                    <span className="text-sm font-bold">From $30</span>
                   </div>
                 </div>
               </div>
@@ -960,6 +1021,38 @@ if(formattedDate == "15/11/2025"){
           </p>
 
           <div className="bg-white p-8 rounded-2xl shadow-lg">
+            {/* Pricing Tier Selection */}
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Select Your Report Type</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                {Object.entries(PRICING_TIERS).map(([key, tier]) => (
+                  <div
+                    key={key}
+                    onClick={() => setSelectedTier(key)}
+                    className={`p-6 rounded-lg cursor-pointer transition-all transform hover:scale-105 ${
+                      selectedTier === key
+                        ? 'bg-blue-600 text-white shadow-lg border-2 border-blue-600'
+                        : 'bg-white text-gray-900 border-2 border-gray-200 hover:border-blue-300'
+                    }`}
+                  >
+                    <div className="text-4xl font-bold mb-2">${tier.price}</div>
+                    <h4 className="text-xl font-bold mb-2">{tier.name}</h4>
+                    <p className={`text-sm mb-4 ${selectedTier === key ? 'text-blue-100' : 'text-gray-600'}`}>
+                      {tier.description}
+                    </p>
+                    <div className={`space-y-2 text-left text-sm ${selectedTier === key ? 'text-blue-100' : 'text-gray-700'}`}>
+                      {tier.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center">
+                          <span className="mr-2">✓</span>
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <form onSubmit={handleVinSubmit} className="space-y-4 mb-6">
               <div>
                 <input
@@ -1008,14 +1101,14 @@ if(formattedDate == "15/11/2025"){
                 disabled={!vinInput.trim() || !emailInput.trim() || !carModelInput.trim() || isSubmitting}
                 className="w-full bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors font-semibold text-lg"
               >
-                {isSubmitting ? 'Submitting...' : 'Get report'}
+                {isSubmitting ? 'Submitting...' : `Get ${PRICING_TIERS[selectedTier].name} Report`}
               </button>
             </form>
 
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
               <div className="text-center">
-                <div className="font-semibold text-gray-900">One-time fee: $40</div>
+                <div className="font-semibold text-gray-900">One-time fee: ${PRICING_TIERS[selectedTier].price}</div>
               </div>
               <div className="text-center">
                 <div className="font-semibold text-gray-900">Report delivered within 6–12 hours</div>
@@ -1876,7 +1969,7 @@ if(formattedDate == "15/11/2025"){
               <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
               <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
             </svg>
-            <span className="font-bold">Get Report $40</span>
+            <span className="font-bold">Get Report ${PRICING_TIERS[selectedTier].price}</span>
           </div>
           <span className="absolute -top-2 -right-2 bg-yellow-400 text-gray-900 text-xs font-bold rounded-full w-8 h-8 flex items-center justify-center animate-bounce">🔥</span>
         </button>
@@ -1928,13 +2021,16 @@ if(formattedDate == "15/11/2025"){
               <p style={{ marginBottom: '10px', fontSize: '14px', color: '#4b5563' }}>
                 <strong>Email:</strong> {emailInput}
               </p>
-              <p style={{ marginBottom: '0', fontSize: '14px', color: '#4b5563' }}>
+              <p style={{ marginBottom: '10px', fontSize: '14px', color: '#4b5563' }}>
                 <strong>Car Model:</strong> {carModelInput}
+              </p>
+              <p style={{ marginBottom: '0', fontSize: '14px', color: '#4b5563' }}>
+                <strong>Report Type:</strong> {PRICING_TIERS[selectedTier].name} - ${PRICING_TIERS[selectedTier].price}
               </p>
             </div>
 
             <p style={{ marginBottom: '20px', color: '#6b7280', fontSize: '14px' }}>
-              Click below to proceed to secure payment. Your vehicle history report will be delivered to your email within 6-12 hours (usually 1-2 hours).
+              Click below to proceed to secure payment. Your vehicle history report ({PRICING_TIERS[selectedTier].name} tier) will be delivered to your email within 6-12 hours (usually 1-2 hours).
             </p>
 
             {!checkoutLoading ? (
@@ -1943,7 +2039,7 @@ if(formattedDate == "15/11/2025"){
                   onClick={openPaddleCheckout}
                   style={modalStyles.proceedButton}
                 >
-                  Proceed to Payment - $40
+                  Proceed to Payment - ${PRICING_TIERS[selectedTier].price}
                 </button>
                 <button
                   onClick={closeCheckoutModal}

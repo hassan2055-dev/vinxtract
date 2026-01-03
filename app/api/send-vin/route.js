@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 export async function POST(request) {
   try {
     
-    const { vin, email, carModel } = await request.json();
+    const { vin, email, carModel, tier, tierName, tierPrice } = await request.json();
 
     // Validate input
     if (!vin || !email || !carModel) {
@@ -62,16 +62,18 @@ export async function POST(request) {
     const adminInfo = await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: ['car.check.store@gmail.com'],
-      subject: `New VIN Report Request - ${vin} (${carModel})`,
+      subject: `New VIN Report Request - ${vin} (${carModel}) - ${tierName} Tier - $${tierPrice}`,
       text: `
 New VIN Report Request Received
 
 VIN Number: ${vin}
 Car Model: ${carModel}
 Customer Email: ${email}
+Report Tier: ${tierName}
+Price: $${tierPrice}
 Request Time: ${formattedDate}
 
-Please process this request and send the vehicle history report to the customer.
+Please process this request and send the ${tierName} vehicle history report to the customer.
       `,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
@@ -93,6 +95,14 @@ Please process this request and send the vehicle history report to the customer.
               <tr>
                 <td style="padding: 8px 0; font-weight: bold; color: #374151;">Customer Email:</td>
                 <td style="padding: 8px 0; color: #6b7280;">${email}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; font-weight: bold; color: #374151;">Report Tier:</td>
+                <td style="padding: 8px 0; color: #16a34a; font-weight: bold;">${tierName}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; font-weight: bold; color: #374151;">Price:</td>
+                <td style="padding: 8px 0; color: #16a34a; font-weight: bold;">$${tierPrice}</td>
               </tr>
               <tr>
                 <td style="padding: 8px 0; font-weight: bold; color: #374151;">Request Time:</td>
