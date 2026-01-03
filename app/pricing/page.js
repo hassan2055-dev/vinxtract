@@ -611,7 +611,7 @@ export default function Pricing() {
               onClick={openModal}
               className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg inline-block"
             >
-              Get Started - From ${PRICING_TIERS.basic.price}
+              Get Started - From ${PRICING_TIERS.hatchback.price}
             </button>
           </div>
 
