@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Pricing() {
   const [showModal, setShowModal] = useState(false);
-  const [selectedTier, setSelectedTier] = useState('standard');
+  const [selectedTier, setSelectedTier] = useState('sedan');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,27 +13,27 @@ export default function Pricing() {
   });
   const [loading, setLoading] = useState(false);
 
-  // Pricing Tiers Configuration
+  // Pricing Tiers Configuration - Vehicle Types
   const PRICING_TIERS = {
-    basic: {
-      name: 'Basic',
+    hatchback: {
+      name: 'Hatchback',
       price: 30,
       priceId: 'pri_01k8bkwee1djsx23kqk4c3qjgb',
-      description: 'Essential vehicle history',
+      description: 'Compact & Efficient',
       features: ['Basic accident history', 'Ownership records', 'Mileage check']
     },
-    standard: {
-      name: 'Standard',
+    sedan: {
+      name: 'Sedan',
       price: 50,
       priceId: 'pri_01k8bm1n7k6kdkb62d0e5r1nha',
-      description: 'Complete vehicle history',
+      description: 'Classic & Comfortable',
       features: ['Full accident history', 'Complete ownership records', 'Mileage verification', 'Title information', 'Safety recalls']
     },
-    premium: {
-      name: 'Premium',
+    suv: {
+      name: '4X4 / SUV',
       price: 70,
       priceId: 'pri_01k8bm2ygfy97ehkedx0361ynh',
-      description: 'Most comprehensive report',
+      description: 'Rugged & Powerful',
       features: ['Full accident history', 'Complete ownership records', 'Mileage verification', 'Title information', 'Safety recalls', 'Market value analysis', 'Detailed damage assessment']
     }
   }
@@ -354,9 +354,9 @@ export default function Pricing() {
                 <thead>
                   <tr className="border-b-2 border-gray-300">
                     <th className="text-left py-3 px-4 font-semibold text-gray-900">Feature</th>
-                    <th className="text-center py-3 px-4 font-semibold text-gray-900">Basic</th>
-                    <th className="text-center py-3 px-4 font-semibold text-gray-900">Standard</th>
-                    <th className="text-center py-3 px-4 font-semibold text-gray-900">Premium</th>
+                    <th className="text-center py-3 px-4 font-semibold text-gray-900">Hatchback</th>
+                    <th className="text-center py-3 px-4 font-semibold text-gray-900">Sedan</th>
+                    <th className="text-center py-3 px-4 font-semibold text-gray-900">4X4 / SUV</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -564,11 +564,11 @@ export default function Pricing() {
             {[
               {
                 question: "What's the difference between the three tiers?",
-                answer: "Basic ($30) includes essential information like accident history, ownership records, and mileage checks. Standard ($50) adds complete title information and safety recalls. Premium ($70) includes everything plus market value analysis and detailed damage assessment."
+                answer: "Hatchback ($30) includes essential information like accident history, ownership records, and mileage checks. Sedan ($50) adds complete title information and safety recalls. 4X4 / SUV ($70) includes everything plus market value analysis and detailed damage assessment."
               },
               {
                 question: "Which tier should I choose?",
-                answer: "Choose Basic if you just need essential information. Choose Standard for a complete overview (most popular). Choose Premium if you're considering a purchase and want comprehensive analysis including market value and detailed damage assessment."
+                answer: "Choose Hatchback if you just need essential information. Choose Sedan for a complete overview (most popular). Choose 4X4 / SUV if you're considering a purchase and want comprehensive analysis including market value and detailed damage assessment."
               },
               {
                 question: "Are there any hidden fees or recurring charges?",

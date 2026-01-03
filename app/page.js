@@ -10,29 +10,29 @@ export default function App() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showCheckoutModal, setShowCheckoutModal] = useState(false)
   const [checkoutLoading, setCheckoutLoading] = useState(false)
-  const [selectedTier, setSelectedTier] = useState('standard')
+  const [selectedTier, setSelectedTier] = useState('sedan')
 
-  // Pricing Tiers Configuration
+  // Pricing Tiers Configuration - Vehicle Types
   const PRICING_TIERS = {
-    basic: {
-      name: 'Basic',
+    hatchback: {
+      name: 'Hatchback',
       price: 30,
       priceId: 'pri_01k8bkwee1djsx23kqk4c3qjgb',
-      description: 'Essential vehicle history',
+      description: 'Compact & Efficient',
       features: ['Basic accident history', 'Ownership records', 'Mileage check']
     },
-    standard: {
-      name: 'Standard',
+    sedan: {
+      name: 'Sedan',
       price: 50,
       priceId: 'pri_01k8bm1n7k6kdkb62d0e5r1nha',
-      description: 'Complete vehicle history',
+      description: 'Classic & Comfortable',
       features: ['Full accident history', 'Complete ownership records', 'Mileage verification', 'Title information', 'Safety recalls']
     },
-    premium: {
-      name: 'Premium',
+    suv: {
+      name: '4X4 / SUV',
       price: 70,
       priceId: 'pri_01k8bm2ygfy97ehkedx0361ynh',
-      description: 'Most comprehensive report',
+      description: 'Rugged & Powerful',
       features: ['Full accident history', 'Complete ownership records', 'Mileage verification', 'Title information', 'Safety recalls', 'Market value analysis', 'Detailed damage assessment']
     }
   }
